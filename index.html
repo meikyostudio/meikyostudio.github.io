@@ -960,76 +960,97 @@
         }, { passive: true });
 
         // --- 7. COMIC PAGE: R KEY TOGGLE IMAGE <-> TEXT VIEW ---
-        (function(){
-            const reflectionPage = document.getElementById('reflection-page');
-            let comicTextMode = false;
+        (function() {
+            // 1. Run immediately, or wait for DOM structure (not full images) if script is in <head>
+            const init = () => {
+                const reflectionPage = document.getElementById('reflection-page');
+                let comicTextMode = false;
 
-            // Collect all comic pages
-            const comicPages = Array.from(document.querySelectorAll('.comic-page'));
+                // Collect all comic pages
+                const comicPages = Array.from(document.querySelectorAll('.comic-page'));
 
-            comicPages.forEach(page => {
-            const img = page.querySelector('img');
-            if (!img) return;
+                comicPages.forEach(page => {
+                    const img = page.querySelector('img');
+                    if (!img) return;
 
-            // store original src if not already stored
-            if (!img.dataset.originalSrc) img.dataset.originalSrc = img.src;
+                    // Store original src reference
+                    if (!img.dataset.originalSrc) img.dataset.originalSrc = img.src;
 
-            // Create overlay image for text version
-            const overlayImg = document.createElement('img');
-            overlayImg.style.position = 'absolute';
-            overlayImg.style.inset = '0';
-            overlayImg.style.width = '100%';
-            overlayImg.style.height = '100%';
-            overlayImg.style.objectFit = 'cover';
-            overlayImg.style.display = 'none';
-            overlayImg.style.zIndex = '20';
-            overlayImg.style.opacity = '1';
-            overlayImg.style.transition = 'opacity 0.3s ease';
+                    // Get the text source now
+                    const textSrc = img.dataset.textSrc;
+                    
+                    // If there is no text version, skip creating the overlay
+                    if (!textSrc) return;
 
-            // ensure the page container is positioned so overlay fits
-            if (getComputedStyle(page).position === 'static') page.style.position = 'relative';
-            page.appendChild(overlayImg);
+                    // Create overlay image immediately
+                    const overlayImg = document.createElement('img');
+                    overlayImg.src = textSrc; // <--- CHANGE 1: Start loading immediately
+                    overlayImg.style.position = 'absolute';
+                    overlayImg.style.inset = '0';
+                    overlayImg.style.width = '100%';
+                    overlayImg.style.height = '100%';
+                    overlayImg.style.objectFit = 'cover';
+                    
+                    // <--- CHANGE 2: Use Opacity for visibility so it loads in background
+                    overlayImg.style.opacity = '0'; 
+                    overlayImg.style.pointerEvents = 'none'; // Click-through when hidden
+                    overlayImg.style.zIndex = '20';
+                    overlayImg.style.transition = 'opacity 0.2s ease-out'; // Snappier transition
 
-            // attach overlay reference to the page
-            img._comicOverlayImg = overlayImg;
-            img._comicPage = page;
-            });
+                    // Ensure the page container is positioned so overlay fits
+                    if (getComputedStyle(page).position === 'static') page.style.position = 'relative';
+                    
+                    page.appendChild(overlayImg);
 
-            function setComicMode(on){
-            comicTextMode = !!on;
-            comicPages.forEach(page => {
-                const img = page.querySelector('img');
-                if (!img) return;
-                const overlayImg = img._comicOverlayImg;
-                const textSrc = img.dataset.textSrc;
+                    // Attach overlay reference to the page
+                    img._comicOverlayImg = overlayImg;
+                });
 
-                if (comicTextMode){
-                if (textSrc){
-                    overlayImg.src = textSrc;
-                    overlayImg.style.display = 'block';
+                function setComicMode(on) {
+                    comicTextMode = !!on;
+                    comicPages.forEach(page => {
+                        const img = page.querySelector('img');
+                        // Check if this image has an overlay created
+                        if (!img || !img._comicOverlayImg) return;
+
+                        const overlayImg = img._comicOverlayImg;
+
+                        if (comicTextMode) {
+                            overlayImg.style.opacity = '1';
+                            overlayImg.style.pointerEvents = 'auto'; // Enable interaction if needed
+                        } else {
+                            overlayImg.style.opacity = '0';
+                            overlayImg.style.pointerEvents = 'none';
+                        }
+                    });
                 }
-                } else {
-                overlayImg.style.display = 'none';
+
+                // Key listener (R)
+                document.addEventListener('keydown', function(e) {
+                    if (e.key.toLowerCase() !== 'r') return;
+                    // Optional: Check if reflection page exists/is active
+                    if (reflectionPage && !reflectionPage.classList.contains('active')) return;
+                    
+                    setComicMode(!comicTextMode);
+                });
+
+                // Expose toggle function
+                window.setComicTextMode = setComicMode;
+
+                // Button listener
+                const ultimateKeyR = document.getElementById('ultimate-key-r');
+                if (ultimateKeyR) {
+                    ultimateKeyR.addEventListener('click', function() {
+                        setComicMode(!comicTextMode);
+                    });
                 }
-            });
-            }
+            };
 
-            // Key listener (R) — only while Reflection page is active
-            document.addEventListener('keydown', function(e){
-            if (e.key.toLowerCase() !== 'r') return;
-            if (!reflectionPage.classList.contains('active')) return;
-            setComicMode(!comicTextMode);
-            });
-
-            // Expose toggle function for console/testing
-            window.setComicTextMode = setComicMode;
-
-            // Also reflect when the div with id ultimate-key-r is pressed or clicked on
-            const ultimateKeyR = document.getElementById('ultimate-key-r');
-            if (ultimateKeyR) {
-            ultimateKeyR.addEventListener('click', function() {
-                setComicMode(!comicTextMode);
-            });
+            // Run setup as soon as DOM is ready (doesn't wait for images to load)
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
             }
         })();
 
