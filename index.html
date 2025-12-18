@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meikyo Studio | Reflection</title>
+    
+    <!-- Tailwind CSS -->
+    <link href="output.css" rel="stylesheet">
+    
+</head>
+<body class="font-montserrat antialiased bg-mk-bg">
+  
+    <!-- Background Animation -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation / Back Button (Only visible on Reflection page) -->
+    <nav id="game-nav" class="fixed top-0 left-0 w-full z-50 p-4 hidden">
+        <a href="#home" onclick="router('home')" class="flex items-center gap-2 text-mk-white hover:text-mk-crimson transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            <span class="font-bold">Return to Studio</span>
+        </a>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- PAGE: HOME (MEIKYO STUDIO) -->
+    <!-- ========================================== -->
+    <main id="home-page" class="page-section active">
+        
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col items-center justify-center text-center px-4 relative">
+            <div class="mb-8 animate-float flex-1 flex flex-col items-center justify-center">
+            <!-- Placeholder for Studio Logo -->
+            <img src="meikyo.png" alt="Logo of Meiko Studio.">
+            <br>
+            <p class="text-lg md:text-xl text-gray-400 font-press-start-2p tracking-wide uppercase mt-4">What Makes You <b>You?</b></p>
+            </div>
+
+            <div class="w-full max-w-2xl mx-auto bg-black/40 backdrop-blur-md p-6 md:p-8 rounded-xl border border-white/10 shadow-2xl">
+            <p class="mb-6 text-lg">We are developing our debut work of art, check it out.</p>
+            <h2 class="font-stick text-4xl md:text-6xl text-mk-crimson mb-8 neon-text tracking-wider">REFLECTION</h2>
+            
+            <a href="#reflection" onclick="router('reflection')" class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-mk-crimson font-montserrat rounded-sm hover:bg-mk-red focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mk-crimson neon-border hover:scale-105">
+                <span class="absolute inset-0 border-2 border-white opacity-20 group-hover:opacity-40 rounded-sm"></span>
+                REFLECT
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5 group-hover:rotate-45 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            </div>
+            <br>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="py-20 px-4 bg-gradient-to-b from-transparent to-black/80">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-marker text-4xl md:text-5xl text-mk-white mb-12 border-b-2 border-mk-red inline-block pb-2">Our Philosophy</h2>
+                <div class="grid md:grid-cols-2 gap-12 text-left">
+                    <div class="bg-white/5 p-8 rounded-lg border-l-4 border-mk-red hover:bg-white/10 transition-colors">
+                        <h3 class="text-2xl font-bold mb-4 text-mk-red font-montserrat">The Meaning of Meikyo</h3>
+                        <!-- <p class="text-gray-300 leading-relaxed">
+                            Derived from the concept of "Meikyo Shisui" (Clear Mirror, Still Water), our studio embodies the state of perfect mental clarity. We build games that reflect the player's true skill and intent, unclouded by distraction.
+                        </p> -->
+                        <p class="text-gray-300 leading-relaxed">
+                            Great games reflect reality and let players learn about themselves. Inspired by "Meikyo Shisui" (Clear Mirror, Still Water), our philosophy is to create immersive experiences with plenty of space for reflection.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 p-8 rounded-lg border-l-4 border-mk-purple hover:bg-white/10 transition-colors">
+                        <h3 class="text-2xl font-bold mb-4 text-mk-purple font-montserrat">eSports First</h3>
+                        <!-- <p class="text-gray-300 leading-relaxed">
+                            Being eSports first means we are planning for pro players, balance, fair play, and long-term sustainability from day one. Our vision is to be the benchmark in eSports and create memorable moments for the community.
+                        </p> -->
+                        <p class="text-gray-300 leading-relaxed">
+                            From prototype one, we design and plan around professional players, who deliver memorable momments and drive the community. Competitive integrity is our absolute priority. Games where a win is left to the roll of a die? Not a chance. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-20 px-4">
+            <div class="max-w-4xl mx-auto bg-gradient-to-br from-gray-900 to-black border border-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl relative overflow-hidden">
+                <!-- Decor -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-mk-crimson blur-[80px] opacity-20"></div>
+                
+                <h2 class="font-marker text-3xl md:text-4xl text-center mb-10">Connect With Us</h2>
+                
+                <div class="flex flex-col md:flex-row gap-8 justify-center items-center mb-12">
+                    <a href="mailto:info@meikyo.studio" class="flex items-center gap-3 px-6 py-3 bg-white text-black font-bold rounded hover:bg-gray-200 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        Email Us
+                    </a>
+                    
+                    <!-- Newsletter -->
+                    <div class="flex-1 w-full max-w-sm">
+                        <form id="subscribe-form" class="flex">
+                            <input type="email" id="email-input" name="email" placeholder="Enter your email" class="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-l focus:outline-none focus:border-mk-crimson text-white">
+                            <button type="submit" class="bg-mk-crimson px-6 py-3 font-bold rounded-r hover:bg-mk-red transition-colors">
+                                Subscribe
+                            </button>
+                        </form>
+                        <p id="response-message" class="text-center mt-3 text-sm transition-opacity duration-500 opacity-0" style="color: var(--color-mk-white);"></p>
+                    </div>
+                </div>
+
+                <!-- Social Links Grid -->
+                <div class="flex justify-center gap-6">
+                    <a href="https://youtube.com/@meikyostudio" class="text-gray-400 hover:text-[#FF0000] transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+                    <a href="https://www.instagram.com/meikyostudio/" class="text-gray-400 hover:text-[#E1306C] transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+                    <a href="https://x.com/meikyostudio" class="text-gray-400 hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a> <!-- X Icon -->
+                    <a href="https://discord.com/invite/duQ2Mzjc8M" class="text-gray-400 hover:text-[#5865F2] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                            <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="py-20 px-4 bg-white/5">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="font-marker text-4xl text-mk-white mb-10 text-center">Latest News</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Placeholder Card -->
+                    <div class="bg-black/60 border border-white/10 p-6 rounded h-64 flex flex-col justify-center items-center text-center group hover:border-mk-gold transition-colors">
+                        <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-mk-gold/20 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400 group-hover:text-mk-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Development Log #1</h3>
+                        <p class="text-gray-500 text-sm">Stay tuned for our first major update.</p>
+                    </div>
+                    <!-- Empty slots for future logic -->
+                    <div class="md:col-span-2 bg-gradient-to-r from-mk-crimson/20 to-transparent border border-mk-crimson/30 p-6 rounded flex items-center justify-center">
+                        <p class="font-montserrat text-2xl text-white/50 tracking-widest animate-pulse">TRANSMISSION INCOMING...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jobs Section -->
+        <section class="py-20 px-4 border-t border-white/5">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-marker text-4xl text-mk-white mb-6">Careers</h2>
+                <p class="text-xl text-gray-400 mb-8">Join the ranks. Build the future.</p>
+                <div class="border-2 border-dashed border-gray-600 rounded-xl p-12">
+                    <p class="text-lg font-mono text-mk-gold">No open positions currently. Check back soon.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- PAGE: REFLECTION (GAME) -->
+    <!-- ========================================== -->
+    <main id="reflection-page" class="page-section hidden pt-20">
+        
+        
+        <!-- Game Header -->
+        <header class="text-center mb-12 relative z-10">
+            <h1 class="font-stick text-6xl md:text-8xl text-mk-crimson neon-text mb-2">REFLECTION</h1>
+            <div class="h-1 w-24 bg-mk-crimson mx-auto shadow-[0_0_10px_#c93756]"></div>
+        </header>
+
+        <!-- Tab Navigation (Smart Sticky) -->
+        <div id="smart-tab-nav" class="flex justify-center gap-4 mb-10 px-4 flex-wrap sticky top-16 z-40 py-4 bg-[#171412]/90 backdrop-blur-sm transition-all duration-300 shadow-xl">
+            <button onclick="switchTab('comic')" id="btn-comic" class="tab-btn px-6 py-2 border-2 border-mk-crimson text-white font-montserrat font-bold hover:bg-mk-crimson/20 active-tab bg-mk-crimson">
+                THE COMIC
+            </button>
+            <button onclick="switchTab('characters')" id="btn-characters" class="tab-btn px-6 py-2 border-2 border-gray-600 text-gray-400 font-montserrat font-bold hover:border-mk-crimson hover:text-white transition-all">
+                CHARACTERS
+            </button>
+            <button onclick="switchTab('prototypes')" id="btn-prototypes" class="tab-btn px-6 py-2 border-2 border-gray-600 text-gray-400 font-montserrat font-bold hover:border-mk-crimson hover:text-white transition-all">
+                PROTOTYPE
+            </button>
+        </div>
+
+        <!-- TAB CONTENT: COMIC -->
+        <div id="tab-comic" class="tab-content max-w-4xl mx-auto px-4 pb-20 block">
+            
+            <div class="text-center mb-8 flex items-center justify-center gap-3">
+                <span class="font-montserrat text-lg text-mk-gold">Press</span>
+                <!-- R Key Icon -->
+                <div id="ultimate-key-r" class="keycap w-10 h-10 bg-gray-800 rounded border border-gray-600 flex items-center justify-center font-bold text-white cursor-pointer select-none" title="Ultimate Ability">
+                    R
+                </div>
+                <span class="font-montserrat text-lg text-mk-gold">to use your ultimate: <span class="text-mk-crimson font-bold">Reflect</span></span>
+            </div>
+
+            <!-- Comic Pages Container (Scroll View) -->
+            <div class="bg-black/40 p-4 md:p-8 rounded-xl border border-white/10 shadow-2xl">
+                <!-- Cover, Pages 1-4, and Back -->
+                <div class="comic-page aspect-[3/4] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <img src="comic/cover.png" data-text-src="cimoc/cover-r.png" alt="Comic Cover" class="w-full h-full object-cover">
+                </div>
+                
+                <div class="comic-page aspect-[3/4] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <img src="comic/1.png" data-text-src="cimoc/1-r.png" alt="Comic Page 1" class="w-full h-full object-cover">
+                </div>
+
+                <div class="comic-page aspect-[3/4] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <img src="comic/2.png" data-text-src="cimoc/2-r.png" alt="Comic Page 2" class="w-full h-full object-cover">
+                </div>
+
+                <div class="comic-page aspect-[3/4] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <img src="comic/3.png" data-text-src="cimoc/3-r.png" alt="Comic Page 3" class="w-full h-full object-cover">
+                </div>
+
+                <div class="comic-page aspect-[3/4] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <img src="comic/4.png" data-text-src="cimoc/4-r.png" alt="Comic Page 4" class="w-full h-full object-cover">
+                </div>
+
+                <div class="comic-page aspect-[1/1] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <img src="comic/back.png" data-text-src="cimoc/back-r.png" alt="Comic Back Cover" class="w-full h-full object-cover">
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- TAB CONTENT: CHARACTERS -->
+        <div id="tab-characters" class="tab-content max-w-5xl mx-auto px-4 pb-20 hidden">
+
+            <!-- Character 1: PYRO -->
+            <div class="character-card mb-20 fade-in-on-scroll">
+                <h3 class="font-marker text-4xl text-mk-pyro mb-2">PYRO</h3>
+                <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-pyro pl-4">
+                    Harnessing the raw power of the sun. High offensive capabilities with radiant burns that reduce enemy healing over time.
+                </p>
+                <div class="relative w-full aspect-video max-h-[60vh] mx-auto rounded-lg overflow-hidden border border-yellow-900 shadow-[0_0_20px_rgba(255,164,0,0.3)]">
+                    
+                </div>
+                <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-pyro to-transparent mt-12 opacity-50"></div>
+            </div>
+
+            <!-- Character 2: HYDRO -->
+            <div class="character-card mb-20 fade-in-on-scroll">
+                <h3 class="font-marker text-4xl text-mk-hydro mb-2">HYDRO</h3>
+                <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-hydro pl-4">
+                    Master of flowing waters and freezing ice. Defensive support with the ability to create barriers and control the battlefield's moisture.
+                </p>
+                <div class="relative w-full aspect-video max-h-[60vh] mx-auto rounded-lg overflow-hidden border border-blue-900 shadow-[0_0_20px_rgba(0,168,255,0.3)]">
+                    
+                </div>
+                <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-hydro to-transparent mt-12 opacity-50"></div>
+            </div>
+
+            <!-- Character 3: ELECTRO -->
+            <div class="character-card mb-20 fade-in-on-scroll">
+                <h3 class="font-marker text-4xl text-mk-electro mb-2">ELECTRO</h3>
+                <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-electro pl-4">
+                    Wielder of lightning and electrical surges. Fast-moving striker with chain reactions that spread damage across multiple enemies.
+                </p>
+                <div class="relative w-full aspect-video max-h-[60vh] mx-auto rounded-lg overflow-hidden border border-yellow-400 shadow-[0_0_20px_rgba(255,255,0,0.3)]">
+                    
+                </div>
+                <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-electro to-transparent mt-12 opacity-50"></div>
+            </div>
+
+            <!-- Character 4: GEO -->
+            <div class="character-card mb-20 fade-in-on-scroll">
+                <h3 class="font-marker text-4xl text-mk-geo mb-2">GEO</h3>
+                <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-geo pl-4">
+                    Command of earth and stone. Tanky defender with the ability to create protective structures and control terrain.
+                </p>
+                <div class="relative w-full aspect-video max-h-[60vh] mx-auto rounded-lg overflow-hidden border border-green-900 shadow-[0_0_20px_rgba(0,204,102,0.3)]">
+                    
+                </div>
+                <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-geo to-transparent mt-12 opacity-50"></div>
+            </div>
+
+            <!-- Character 5: ANEMO -->
+            <div class="character-card mb-20 fade-in-on-scroll">
+                <h3 class="font-marker text-4xl text-mk-anemo mb-2">ANEMO</h3>
+                <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-anemo pl-4">
+                    Harnesser of the wind and air currents. Agile scout with mobility and crowd control through windblasts and cyclones.
+                </p>
+                <div class="relative w-full aspect-video max-h-[60vh] mx-auto rounded-lg overflow-hidden border border-cyan-900 shadow-[0_0_20px_rgba(0,212,212,0.3)]">
+                    
+                </div>
+                <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-anemo to-transparent mt-12 opacity-50"></div>
+            </div>
+
+            <!-- Character 6 -->
+            <div class="character-card mb-20 fade-in-on-scroll">
+                <h3 class="font-marker text-4xl text-mk-purple mb-2">VOID</h3>
+                <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-purple pl-4">
+                    A master of the dark arts, utilizing shadows to reposition and strike from the unseen. The Void Walker reflects damage back to the source using the cosmos.
+                </p>
+                <div class="relative w-full aspect-video bg-black rounded-lg border border-purple-900 overflow-hidden shadow-[0_0_20px_rgba(107,33,168,0.3)]">
+                    
+                </div>
+                <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-purple to-transparent mt-12 opacity-50"></div>
+            </div>
+
+        </div>
+
+        <!-- TAB CONTENT: PROTOTYPES -->
+        <div id="tab-prototypes" class="tab-content max-w-5xl mx-auto px-4 pb-20 hidden">
+            
+            <div class="grid md:grid-cols-1 gap-8"></div>
+
+            <!-- Give a disclaimer that this is just the prototype made in Godot and the final game may be made in Unreal Engine. -->
+            <div class="bg-gradient-to-r from-mk-purple/40 to-mk-crimson/40 p-6 rounded-xl border-2 border-dashed border-mk-gold shadow-lg shadow-mk-purple/30 mb-8 fade-in-on-scroll">
+                <div class="flex items-start gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-mk-gold flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    <div>
+                        <h3 class="font-marker text-lg text-mk-gold mb-2">Prototype Notice</h3>
+                        <p class="text-gray-300 text-sm">This prototype was created in <span class="text-mk-crimson font-bold">Godot</span>, an engine we really love. The final release of Reflection may be developed in <span class="text-mk-crimson font-bold">Unreal Engine</span>, undergoing significant visual and mechanical improvements.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Creating Your Hero: Choosing a Morph</h3>
+                <p class="text-gray-400 text-sm mb-4">The Morph is so named because they can be *morphed* into what fits your playstyle, with 6 elements and 6 classes, or 36 different Morphs to choose from. Both the element and class define the Morph's characteristics. Fire morphs, for example, are expected to have a higher attack speed, and Intelligent morphs are expected to earn XP at a higher rate. The element also decides which abilities are available, with Void being the only element that grants access to all of them. The star icon you see in the stats represents Elemental Power, which increases damage and the elemental benefit.</p>
+                <br>
+                <p class="text-gray-400 text-sm mb-4">Note: This UI is meant to be a 1280x720p window outside the full-screen game for selection only.</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/QHwN4lQTpl0?si=x6Yci0peS5rfdPwv&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Creating Your Hero: Choosing an Ultimate</h3>
+                <p class="text-gray-400 text-sm mb-4">Unlike morphs, abilities do not have classes, but like morphs, they are made of elements as well. A hero can only have one ultimate ability. The player that decides the morph also selects the ultimate, and once chosen, that ultimate cannot be selected by any other player. Ultimates level up slower than basic abilities and typically have a higher cooldown. Properly landing or missing an ultimate can make or break a win.</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/StrMfmTxOLw?si=JOKgtwDrxbSjSrxh&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Creating Your Hero: Choosing Abilities</h3>
+                <p class="text-gray-400 text-sm mb-4">The Reflection (opponent) of the player who chose the Morph and Ultimate decides the three basic abilities the hero will possess, thus forging the hero into existence. Basic abilities, like Ultimates and Morphs, are element-based. Like with Ultimates, once a basic ability is chosen, it cannot be chosen by others. Because both sides play with the same abilities (a symmetrical draft), drafting is based on playstyle rather than win rate (the current meta).</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/n3YtEDqP1Os?si=eMTUjCZFmz4hTvvH&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Creating Your Hero: Complete Electro Flow</h3>
+                <p class="text-gray-400 text-sm mb-4">For Morphs other than Void, only abilities of their element and of Void are available. See the full flow for Electro below.</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/MgEvCm8IJk8?si=O-emTxXVIjTMbdyn&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Hovering Abilities and Showing Ultimates</h3>
+                <p class="text-gray-400 text-sm mb-4">In popular MOBAs, a hero's model immediately tells you what abilities you're playing against. This is not the case in Ability Draft, where the same model can have very different abilities across matches. To help players quickly know what abilities they're facing, instead of requiring memorization, the basic abilities are shown hovering next to the model, and the ultimate ability is shown in the UI when the Alt key is pressed. Hiding or highlighting them under specific scenarios can further enhance the experience.</p>
+            </div>
+            
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Interacting Elements</h3>
+                <p class="text-gray-400 text-sm mb-4">Attack damage is multiplied by a factor based on the element of the attacker and the element of the attacked. Ability damage works the same way, the attacker's element is replaced with the ability's element for this calculation. The factors are shown in the beautiful grid below with numbers symmetrically offset from 1 across the diagonal.* Void does not interact with any element because it can be thought of as the absence or the presence of all elements, thus also called Pure.</p>
+                <!-- <br> -->
+                <p class="text-gray-400 text-sm mb-4">Elemental Interactions Matrix</p>
+                <!-- <br> -->
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full border-collapse text-center text-sm md:text-base">
+                        <thead>
+                            <tr class="bg-mk-crimson/20">
+                                <th class="border border-mk-crimson/40 px-3 py-2 font-bold text-mk-crimson">Element</th>
+                                <th class="border border-mk-crimson/40 px-3 py-2 font-bold text-mk-geo">G</th>
+                                <th class="border border-mk-crimson/40 px-3 py-2 font-bold text-mk-pyro">P</th>
+                                <th class="border border-mk-crimson/40 px-3 py-2 font-bold text-mk-anemo">A</th>
+                                <th class="border border-mk-crimson/40 px-3 py-2 font-bold text-mk-hydro">H</th>
+                                <th class="border border-mk-crimson/40 px-3 py-2 font-bold text-mk-electro">E</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="border border-mk-crimson/40 px-3 py-2 font-bold text-mk-geo">G</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-white">1</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-gold">1.2</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-crimson">0.9</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-crimson">0.8</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-gold">1.1</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="border border-mk-crimson/40 px-3 py-2 font-bold text-mk-pyro">P</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-crimson">0.8</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-white">1</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-gold">1.1</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-gold">1.2</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-crimson">0.9</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="border border-mk-crimson/40 px-3 py-2 font-bold text-mk-anemo">A</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-gold">1.1</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-crimson">0.9</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-white">1</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-gold">1.2</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-crimson">0.8</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="border border-mk-crimson/40 px-3 py-2 font-bold text-mk-hydro">H</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-gold">1.2</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-crimson">0.8</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-crimson">0.8</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-white">1</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-gold">1.2</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="border border-mk-crimson/40 px-3 py-2 font-bold text-mk-electro">E</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-crimson">0.9</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-gold">1.1</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-gold">1.2</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-mk-crimson">0.8</td>
+                                <td class="border border-mk-crimson/40 px-3 py-2 text-white">1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <p class="text-gray-400 text-sm mb-4">Note: Attackers in rows, attacked in columns.</p>
+                    <!-- <br> -->
+                    <p class="text-gray-400 text-sm mb-4">* More technically, the matrix exhibits additive symmetry around the principal diagonal with a center value of 1.</p>
+                </div>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/TnUrTPTp3kY?si=jIXXaCu5LaCzH9TZ&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Parrying to Block Damage</h3>
+                <p class="text-gray-400 text-sm mb-4">One of the best feelings in games like Sekiro is perfectly timing a parry to block what could otherwise be fatal damage. Reflection aims to provide that satisfactory feeling. The capacity to block damage can be increased with items and abilities.</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/WXWo4CpZ5MM?si=scTZ2y46tFMCplgp&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Jumping to Evade Spells and Attackers</h3>
+                <p class="text-gray-400 text-sm mb-4">You can jump to evade some ground based spells. Doing a double-jump off of an attacker stuns them, providing you with an opportunity to evade them.</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+
+                </div>
+                <br>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/2WuGi8pXzTY?si=DaUADfTtL-UeSaIT&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Critting Without RNG</h3>
+                <p class="text-gray-400 text-sm mb-4">Since our philosophy is to not let the roll of a die decide a win, we must provide other means for effects like critical strikes. One way is through Abilities or Gems that temporarily allow crits upon meeting set criteria.</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/LWtaKLnP5yU?si=ObSJqhB8mB31LXyz&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Doing a Fatality</h3>
+                <p class="text-gray-400 text-sm mb-4">Critical strikes turn into Fatality when the opponent is under a threshold health percentage.</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Leveling Up and Unlocking Gems</h3>
+                <p class="text-gray-400 text-sm mb-4">The fifth level of a basic ability, the fourth of an ultimate, and the fifteenth hero level unlock choosing a Gem for the basic ability, the ultimate, and the Morph respectively. Ability Gems passively enhance abilities and Morph Gems provide passive effects based on the Ability and Morph respectively. Your leveling choices and the Gems you select will ultimately decide whether you best your Reflection. <b>This is the point where the reflection breaks, so to speak.</b></p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Crafting Items: Introduction</h3>
+                <p class="text-gray-400 text-sm mb-4">Recipes make sense for popular MOBAs with fixed sets of abilities, but they become restrictive in Ability Draft. Therefore, Crafting your own items is not a nice-to-have but a necessity in Ability Draft, especially in a symmetrical one. This feature will distinguish the good players from the best, as it allows them to express their playstyle with greater flexibility and more room for creativity.</p>
+                <p class="text-gray-400 text-sm mb-4">We have implemented a modular system that clearly separates Passive Items (which modify attributes or provide persistent effects) from Active Items (Catalysts). Passive Items are tiered and further distinguished by whether they simply modify attributes or grant special effects (Epic).</p>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Crafting Items: Passive Items</h3>
+                <p class="text-gray-400 text-sm mb-4">Passive Items belong to one of 13 Paths. Forging two or more items from the same Path unlocks powerful Path Benefits, the strength of which depends on the Path Level achieved. This ensures that crafting remains a creative, strategic process, not just a mere act of bundling items. Passive Items that only modify attributes and do not restrict further forging range from Basic to Exotic, with higher tiers costing more.</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Crafting Items: Epic Items</h3>
+                <p class="text-gray-400 text-sm mb-4">Epic Items are special items that cannot be purchased; they can only be forged. Epic Items cost no RPs. Once an Epic Item is incorporated, the forged item itself becomes Epic and cannot be used for any further forging. This limitation means players must strategically choose their Epic Items. These items often provide a unique, powerful effect instead of a simple attribute modification.</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Crafting Items: Catalysts</h3>
+                <p class="text-gray-400 text-sm mb-4">Catalysts are active items, so named because they catalyze reactions through special effects triggered by the player. They cannot be forged with Passive Items but can be upgraded. Unlike Epic Items, Catalysts and their upgrades cost RPs. This creates a critical choice: at various points in the game, players must decide between spending RPs to buy or upgrade a Catalyst (which provides no passive attribute benefit) or using those resources to progress toward forging a game-changing Epic Item. This constant resource tension significantly adds depth to the game.</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/VAD5NMnE5fY?si=1VmZMluvkk7YF4ca&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
+                <h3 class="font-marker text-2xl text-white mb-2">Highlighting the Common Aspects</h3>
+                <p class="text-gray-400 text-sm mb-4">Other aspects of Reflection are common with popular MOBAs, in how RP (Reward Points, akin to gold) and XP are earned, the risk-reward principle, monsters, jungle, lanes, towers, and the ultimate goal of defending your base while destroying your enemy's.</p>
+                <div class="aspect-video bg-black rounded overflow-hidden relative">
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/KhSEWVPmDto?si=GfCp3_C32teriEfY&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
+
+            <div class="bg-gradient-to-r from-mk-crimson/30 to-mk-purple/30 p-6 rounded-xl border-2 border-mk-crimson hover:border-mk-gold transition-colors fade-in-on-scroll shadow-lg shadow-mk-crimson/20">
+                <h3 class="font-marker text-2xl text-mk-gold mb-2">We Want to Hear From You</h3>
+                <p class="text-gray-300 text-sm mb-4">Hate it or love it, we want to hear from you. Let us know what you like and don't like about Reflection, it's still in early development. Join our discord and follow our socials!</p>
+            </div>
+
+            <div class="bg-white/5 p-6 rounded-xl border border-white/10 fade-in-on-scroll mt-12">
+                <h3 class="font-marker text-2xl text-white mb-6">Attributions</h3>
+                <div class="space-y-4 text-gray-400 text-sm">
+                    <div class="border-l-2 border-mk-crimson/50 pl-4 py-2">
+                        <p class="font-bold text-white mb-1">Cyberpunk Noodle Kiosk – Environment Prop</p>
+                        <p>Created by <a href="https://skfb.ly/pxwpC" class="text-mk-crimson hover:underline">Marina Belov</a> - Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" class="text-mk-crimson hover:underline">CC BY 4.0</a></p>
+                    </div>
+                    <div class="border-l-2 border-mk-crimson/50 pl-4 py-2">
+                        <p class="font-bold text-white mb-1">sakura</p>
+                        <p>Created by <a href="https://skfb.ly/oK9sU" class="text-mk-crimson hover:underline">dimal965</a> - Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" class="text-mk-crimson hover:underline">CC BY 4.0</a></p>
+                    </div>
+                    <div class="border-l-2 border-mk-crimson/50 pl-4 py-2">
+                        <p class="font-bold text-white mb-1">Ruined rock fence</p>
+                        <p>Created by <a href="https://skfb.ly/6RLwN" class="text-mk-crimson hover:underline">VladNeko</a> - Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" class="text-mk-crimson hover:underline">CC BY 4.0</a></p>
+                    </div>
+                    <div class="border-l-2 border-mk-crimson/50 pl-4 py-2">
+                        <p class="font-bold text-white mb-1">Glowing Rock</p>
+                        <p>Created by <a href="https://skfb.ly/6RSu8" class="text-mk-crimson hover:underline">JAY2.0</a> - Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" class="text-mk-crimson hover:underline">CC BY 4.0</a></p>
+                    </div>
+                    <div class="border-l-2 border-mk-crimson/50 pl-4 py-2">
+                        <p class="font-bold text-white mb-1">Patch of Heaven - The White Tree</p>
+                        <p>Created by <a href="https://skfb.ly/MnqO" class="text-mk-crimson hover:underline">olmopotums</a> - Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" class="text-mk-crimson hover:underline">CC BY 4.0</a></p>
+                    </div>
+                    <div class="border-l-2 border-mk-crimson/50 pl-4 py-2">
+                        <p class="font-bold text-white mb-1">The Buddha statue in a mountain</p>
+                        <p>Created by <a href="https://skfb.ly/oqAQL" class="text-mk-crimson hover:underline">AshSkag</a> - Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" class="text-mk-crimson hover:underline">CC BY 4.0</a></p>
+                    </div>
+                    <div class="border-l-2 border-mk-crimson/50 pl-4 py-2">
+                        <p class="font-bold text-white mb-1">Grappling Hook Head Piece</p>
+                        <p>Created by <a href="https://skfb.ly/6WLVZ" class="text-mk-crimson hover:underline">Maxwell Walton</a> - Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" class="text-mk-crimson hover:underline">CC BY 4.0</a></p>
+                    </div>
+                    <div class="border-l-2 border-mk-crimson/50 pl-4 py-2">
+                        <p class="font-bold text-white mb-1">Spiky Chain</p>
+                        <p>Created by <a href="https://skfb.ly/6T8OR" class="text-mk-crimson hover:underline">Jorada</a> - Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" class="text-mk-crimson hover:underline">CC BY 4.0</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Subtle Landscape Nudge (corner button) -->
+        <div id="landscape-nudge">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="2"/>
+                <path d="M7 20h10"/>
+                <path d="M12 4v7"/>
+                <path d="M8 15l4 4 4-4"/>
+            </svg> -->
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 122.88 106.43" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" style="enable-background:new 0 0 122.88 106.43;" xml:space="preserve">
+            <style type="text/css">
+                .st0{fill-rule:evenodd;clip-rule:evenodd;}
+            </style>
+            <g>
+                <path class="st0" d="M11.1,0h35.63c3.05,0,5.85,1.25,7.85,3.25c2.03,2.03,3.25,4.8,3.25,7.85v31.46h-3.19V12.18H3.15v75.26l0,0
+                    h7.61v11.61c0,1.58,0.27,3.1,0.77,4.51H11.1c-3.05,0-5.85-1.25-7.85-3.25C1.22,98.27,0,95.51,0,92.45V11.1
+                    c0-3.05,1.25-5.85,3.25-7.85C5.28,1.22,8.04,0,11.1,0L11.1,0L11.1,0z M94.95,33.45c-0.37-5.8-2.64-10.56-6.06-13.97
+                    c-3.64-3.63-8.59-5.74-13.94-5.93l2.46,2.95c0.73,0.88,0.62,2.18-0.26,2.91c-0.88,0.73-2.18,0.62-2.91-0.26l-5.72-6.85l0,0
+                    c-0.72-0.86-0.62-2.14,0.22-2.88l6.71-5.89c0.86-0.75,2.16-0.66,2.91,0.19c0.75,0.86,0.66,2.16-0.19,2.91l-3.16,2.78
+                    c6.43,0.21,12.4,2.75,16.8,7.13c4.07,4.06,6.79,9.69,7.25,16.49l2.58-3.08c0.73-0.88,2.04-0.99,2.91-0.26
+                    c0.88,0.73,0.99,2.04,0.26,2.91l-5.73,6.84c-0.72,0.86-1.99,0.99-2.87,0.29l-6.98-5.56c-0.89-0.71-1.04-2.01-0.33-2.91
+                    c0.71-0.89,2.01-1.04,2.91-0.33L94.95,33.45L94.95,33.45z M122.88,59.7v35.63c0,3.05-1.25,5.85-3.25,7.85
+                    c-2.03,2.03-4.8,3.25-7.85,3.25h-78.9c-3.05,0-5.85-1.25-7.85-3.25c-2.03-2.03-3.25-4.8-3.25-7.85V59.7c0-3.05,1.25-5.85,3.25-7.85
+                    c2.03-2.03,4.79-3.25,7.85-3.25h78.9c3.05,0,5.85,1.25,7.85,3.25C121.66,53.88,122.88,56.64,122.88,59.7L122.88,59.7L122.88,59.7z
+                    M35.41,77.49c0,2.51-2.03,4.57-4.57,4.57c-2.51,0-4.57-2.03-4.57-4.57c0-2.51,2.03-4.57,4.57-4.57
+                    C33.36,72.92,35.41,74.95,35.41,77.49L35.41,77.49L35.41,77.49z M37.88,51.75v51.49h72.82V51.75H37.88L37.88,51.75z"/>
+            </g>
+            </svg>
+            <span>Rotate for best view</span>
+        </div>
+
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="bg-black text-white py-10 border-t border-gray-900 relative z-10">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            
+            <div class="flex gap-8 mb-6">
+                <!-- Socials (Repeated for consistency) -->
+                <a href="https://youtube.com/@meikyostudio" class="hover:text-mk-crimson transition-transform hover:-translate-y-1">YouTube</a>
+                <a href="https://www.instagram.com/meikyostudio/" class="hover:text-mk-crimson transition-transform hover:-translate-y-1">Instagram</a>
+                <a href="https://x.com/meikyostudio" class="hover:text-mk-crimson transition-transform hover:-translate-y-1">X</a>
+                <a href="https://discord.com/invite/duQ2Mzjc8M" class="hover:text-mk-crimson transition-transform hover:-translate-y-1">Discord</a>
+            </div>
+
+            <img src="meikyo.png" alt="Logo of Meikyo Studio" width="100" class="items-center">
+            <br>
+            <div class="text-center text-gray-500 text-sm">
+                <!-- <p class="font-stick mb-2 text-xl text-gray-700">MEIKYO STUDIO</p> -->
+                <p>&copy; 2026 Meikyo Studio. All rights reserved.</p>
+                <!-- <p class="mt-2 text-xs">Designed for Hostinger Deployment</p> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIC & ANIMATION -->
+    <script>
+        // --- 1. ROUTING LOGIC ---
+        function router(route) {
+            // Update URL hash without reload
+            if(history.pushState) {
+                history.pushState(null, null, '#' + route);
+            } else {
+                location.hash = '#' + route;
+            }
+            renderPage(route);
+        }
+
+        function renderPage(route) {
+            const homePage = document.getElementById('home-page');
+            const reflectPage = document.getElementById('reflection-page');
+            const nav = document.getElementById('game-nav');
+
+            window.scrollTo(0, 0);
+
+            if (route === 'reflection' || route === 'noitcelfer') {
+                homePage.classList.remove('active');
+                setTimeout(() => {
+                    homePage.style.display = 'none';
+                    reflectPage.style.display = 'block';
+                    nav.style.display = 'block';
+                    // Trigger reflow
+                    void reflectPage.offsetWidth;
+                    reflectPage.classList.add('active');
+                }, 500);
+            } else {
+                reflectPage.classList.remove('active');
+                nav.style.display = 'none';
+                setTimeout(() => {
+                    reflectPage.style.display = 'none';
+                    homePage.style.display = 'block';
+                    // Trigger reflow
+                    void homePage.offsetWidth;
+                    homePage.classList.add('active');
+                }, 500);
+            }
+        }
+
+        // Handle initial load and back/forward buttons
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.replace('#', '');
+            renderPage(hash === 'reflection' ? 'reflection' : 'home');
+        });
+        window.addEventListener('popstate', () => {
+            const hash = window.location.hash.replace('#', '');
+            renderPage(hash === 'reflection' ? 'reflection' : 'home');
+        });
+
+
+        // --- 2. TAB LOGIC ---
+        function switchTab(tabName) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            // Reset buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-mk-crimson', 'text-white', 'border-mk-crimson');
+                btn.classList.add('text-gray-400', 'border-gray-600');
+            });
+
+            // Show selected
+            document.getElementById('tab-' + tabName).classList.remove('hidden');
+            document.getElementById('tab-' + tabName).classList.add('block');
+            
+            // Highlight button
+            const activeBtn = document.getElementById('btn-' + tabName);
+            activeBtn.classList.remove('text-gray-400', 'border-gray-600');
+            activeBtn.classList.add('bg-mk-crimson', 'text-white', 'border-mk-crimson');
+
+            // Scroll back to top
+            window.scrollTo(0, 0)
+        }
+
+
+        // --- 3. CANVAS ANIMATION (Cosmos + Sakura) ---
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        let width, height;
+        let particles = [];
+        let petals = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 2;
+                this.speedX = (Math.random() - 0.5) * 0.2;
+                this.speedY = (Math.random() - 0.5) * 0.2;
+                this.color = Math.random() > 0.5 ? 'rgba(107, 33, 168, ' : 'rgba(255, 255, 255, '; // Purple or White
+                this.alpha = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0) this.x = width;
+                if (this.x > width) this.x = 0;
+                if (this.y < 0) this.y = height;
+                if (this.y > height) this.y = 0;
+            }
+            draw() {
+                ctx.fillStyle = this.color + this.alpha + ')';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        class Petal {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height - height; // Start above
+                this.size = Math.random() * 5 + 3;
+                this.speedY = Math.random() * 1 + 0.5;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.rotation = Math.random() * 360;
+                this.rotationSpeed = (Math.random() - 0.5) * 2;
+                this.color = 'rgba(255, 183, 197, 0.6)'; // Sakura Pink
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += Math.sin(this.y * 0.01) + this.speedX;
+                this.rotation += this.rotationSpeed;
+
+                if (this.y > height) {
+                    this.y = -10;
+                    this.x = Math.random() * width;
+                }
+            }
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.rotation * Math.PI / 180);
+                ctx.fillStyle = this.color;
+                // Draw irregular petal shape
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.bezierCurveTo(this.size / 2, -this.size / 2, this.size, 0, 0, this.size);
+                ctx.bezierCurveTo(-this.size, 0, -this.size / 2, -this.size / 2, 0, 0);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            petals = [];
+            // Create Stars/Dust
+            for (let i = 0; i < 150; i++) particles.push(new Particle());
+            // Create Sakura
+            for (let i = 0; i < 10; i++) petals.push(new Petal());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            // Draw gradient background
+            // We keep it transparent to show CSS bg color, but can add subtle gradient here if needed
+            
+            particles.forEach(p => { p.update(); p.draw(); });
+            petals.forEach(p => { p.update(); p.draw(); });
+            
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => { resize(); initParticles(); });
+        resize();
+        initParticles();
+        animate();
+
+
+        // --- 4. SCROLL OBSERVER (For Videos/Animations) ---
+        const observerOptions = {
+            threshold: 0.3
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target.querySelector('video');
+                    if (video) {
+                        video.play().catch(e => console.log("Autoplay prevented"));
+                    }
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                } else {
+                    const video = entry.target.querySelector('video');
+                    if (video) {
+                        video.pause();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // --- 5. SMART NAV (Hide/Show on Scroll) ---
+        let lastScrollTop = 0;
+        let ticking = false;
+        const smartNav = document.getElementById('smart-tab-nav');
+        const SCROLL_THRESHOLD = 150;        // Only activate smart behavior after scrolling this far
+        const UPWARD_INTENT_THRESHOLD = 10;  // How many px upward before we consider "intent"
+
+        function updateNav() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Only run this logic on the Reflection page
+            if (document.getElementById('reflection-page').style.display === 'none') {
+                ticking = false;
+                return;
+            }
+
+            // Always visible at very top
+            if (scrollTop <= 100) {
+                smartNav.style.transform = 'translateY(0)';
+                smartNav.style.opacity = '1';
+                smartNav.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
+            }
+            // Deep scroll + clear upward intent → show
+            else if (scrollTop < lastScrollTop - UPWARD_INTENT_THRESHOLD && scrollTop > SCROLL_THRESHOLD) {
+                smartNav.style.transform = 'translateY(0)';
+                smartNav.style.opacity = '1';
+                smartNav.style.transition = 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease';
+            }
+            // Scrolling down or no intent → hide
+            else if (scrollTop > lastScrollTop + 5) {
+                smartNav.style.transform = 'translateY(-150%)';
+                smartNav.style.opacity = '0';
+                smartNav.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease';
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateNav);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // --- 6. SUBTLE LANDSCAPE NUDGE — FINAL ROCK-SOLID VERSION ---
+        const nudge = document.getElementById('landscape-nudge');
+        let hideTimer = null;
+        let currentPage = 'home';  // <-- This is the key fix!
+
+        function showNudge() {
+            if (currentPage !== 'reflection') return;
+            if (window.innerWidth > 768) return;           // not mobile
+            if (window.innerHeight <= window.innerWidth) return; // already landscape
+
+            nudge.classList.add('show');
+
+            clearTimeout(hideTimer);
+            hideTimer = setTimeout(() => {
+                nudge.classList.remove('show');
+            }, 6000);
+        }
+
+        function hideNudge() {
+            nudge.classList.remove('show');
+            clearTimeout(hideTimer);
+        }
+
+        function checkAndShow() {
+            const isMobile = window.innerWidth <= 768;
+            const isPortrait = window.innerHeight > window.innerWidth;
+
+            if (currentPage === 'reflection' && isMobile && isPortrait) {
+                showNudge();
+            } else {
+                hideNudge();
+            }
+        }
+
+        // === UPDATE currentPage in your router ===
+        const originalRenderPage = renderPage;
+        renderPage = function(route) {
+            originalRenderPage(route);
+
+            // Update the global state immediately
+            currentPage = (route === 'reflection' || route === 'noitcelfer') ? 'reflection' : 'home';
+
+            setTimeout(checkAndShow, 200);  // after page transition
+        };
+
+        // Also update on load / hashchange / back button
+        function updatePageFromHash() {
+            const hash = window.location.hash.replace('#', '') || 'home';
+            currentPage = (hash === 'reflection' || hash === 'noitcelfer') ? 'reflection' : 'home';
+            checkAndShow();
+        }
+
+        window.addEventListener('load', updatePageFromHash);
+        window.addEventListener('hashchange', updatePageFromHash);
+        window.addEventListener('pageshow', updatePageFromHash); // fixes bfcache
+
+        // React to orientation/resize
+        window.addEventListener('resize', checkAndShow);
+        window.addEventListener('orientationchange', checkAndShow);
+
+        // Hide on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 120) hideNudge();
+        }, { passive: true });
+
+        // --- 7. COMIC PAGE: R KEY TOGGLE IMAGE <-> TEXT VIEW ---
+        (function(){
+            const reflectionPage = document.getElementById('reflection-page');
+            let comicTextMode = false;
+
+            // Collect all comic pages
+            const comicPages = Array.from(document.querySelectorAll('.comic-page'));
+
+            comicPages.forEach(page => {
+            const img = page.querySelector('img');
+            if (!img) return;
+
+            // store original src if not already stored
+            if (!img.dataset.originalSrc) img.dataset.originalSrc = img.src;
+
+            // Create overlay image for text version
+            const overlayImg = document.createElement('img');
+            overlayImg.style.position = 'absolute';
+            overlayImg.style.inset = '0';
+            overlayImg.style.width = '100%';
+            overlayImg.style.height = '100%';
+            overlayImg.style.objectFit = 'cover';
+            overlayImg.style.display = 'none';
+            overlayImg.style.zIndex = '20';
+            overlayImg.style.opacity = '1';
+            overlayImg.style.transition = 'opacity 0.3s ease';
+
+            // ensure the page container is positioned so overlay fits
+            if (getComputedStyle(page).position === 'static') page.style.position = 'relative';
+            page.appendChild(overlayImg);
+
+            // attach overlay reference to the page
+            img._comicOverlayImg = overlayImg;
+            img._comicPage = page;
+            });
+
+            function setComicMode(on){
+            comicTextMode = !!on;
+            comicPages.forEach(page => {
+                const img = page.querySelector('img');
+                if (!img) return;
+                const overlayImg = img._comicOverlayImg;
+                const textSrc = img.dataset.textSrc;
+
+                if (comicTextMode){
+                if (textSrc){
+                    overlayImg.src = textSrc;
+                    overlayImg.style.display = 'block';
+                }
+                } else {
+                overlayImg.style.display = 'none';
+                }
+            });
+            }
+
+            // Key listener (R) — only while Reflection page is active
+            document.addEventListener('keydown', function(e){
+            if (e.key.toLowerCase() !== 'r') return;
+            if (!reflectionPage.classList.contains('active')) return;
+            setComicMode(!comicTextMode);
+            });
+
+            // Expose toggle function for console/testing
+            window.setComicTextMode = setComicMode;
+
+            // Also reflect when the div with id ultimate-key-r is pressed or clicked on
+            const ultimateKeyR = document.getElementById('ultimate-key-r');
+            if (ultimateKeyR) {
+            ultimateKeyR.addEventListener('click', function() {
+                setComicMode(!comicTextMode);
+            });
+            }
+        })();
+
+        // --- 8. SUBSCRIBER EMAIL SUBMISSION ---
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx5Ri7k4_pMqxWNdogOAV1Csp9v0ucxFyu67taptYooPwZBRUcD3OfghUHPNm8S2Ko_/exec'; 
+        const ATTEMPTS_KEY = 'subscribeAttempts';
+        const MAX_ATTEMPTS = 5;
+        // ---------------------
+
+        const form = document.getElementById('subscribe-form');
+        const responseMessage = document.getElementById('response-message');
+        const emailInput = document.getElementById('email-input');
+
+        // Function to update the message and make it visible
+        function updateMessage(text, color) {
+            responseMessage.style.color = color;
+            responseMessage.textContent = text;
+            responseMessage.classList.add('opacity-100');
+        }
+
+        // Function to get the current attempt count from localStorage
+        function getAttempts() {
+            return parseInt(localStorage.getItem(ATTEMPTS_KEY) || 0);
+        }
+
+        // Function to increment the attempt count
+        function incrementAttempts() {
+            let count = getAttempts() + 1;
+            localStorage.setItem(ATTEMPTS_KEY, count);
+            return count;
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            let currentAttempts = getAttempts();
+
+            // 1. Check if the user has reached the attempt limit
+            if (currentAttempts >= MAX_ATTEMPTS) {
+                updateMessage(`That's enough now (Attempt ${MAX_ATTEMPTS}/${MAX_ATTEMPTS}). Please check your email or refresh later.`, 
+                            'var(--color-mk-red)'); // Use Gold for the humorous warning
+                return; 
+            }
+            
+            // Display pending message
+            updateMessage('Subscribing...', 'var(--color-mk-white)');
+
+            const formData = new FormData(form);
+            
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: formData 
+            })
+            .then(response => {
+                // Increment attempt counter regardless of success/fail (for safety)
+                currentAttempts = incrementAttempts();
+
+                // Check if the script returned a non-200 status (network error, etc.)
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.result === 'success') {
+                    // Success: Remove attempts counter as they have subscribed
+                    localStorage.removeItem(ATTEMPTS_KEY);
+                    updateMessage(data.message, 'var(--color-mk-gold)');
+                    form.reset(); 
+                } else {
+                    // Error from the script itself (e.g., malformed data)
+                    updateMessage(data.error, 
+                                'var(--color-mk-red)');
+                }
+            })
+            .catch(error => {
+                // Catch network errors
+                updateMessage(`Error: Could not connect. Try again later (Attempt ${currentAttempts}/${MAX_ATTEMPTS}).`, 
+                            'var(--color-mk-red)');
+                console.error('Fetch Error:', error);
+            });
+        });
+
+    </script>
+</body>
+</html>
