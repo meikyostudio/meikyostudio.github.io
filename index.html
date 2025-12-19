@@ -200,28 +200,28 @@
             <!-- Comic Pages Container (Scroll View) -->
             <div class="bg-black/40 p-4 md:p-8 rounded-xl border border-white/10 shadow-2xl">
                 <!-- Cover, Pages 1-4, and Back -->
-                <div class="comic-page aspect-[9/16] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
-                    <img src="comic/cover.png" data-text-src="cimoc/cover-r.png" alt="Comic Cover" class="w-full h-full object-cover">
+                <div class="comic-page aspect-[2480/3508] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <img src="comic/cover.png" data-text-src="cimoc/cover-r.png" alt="Comic Cover" class="w-full h-full object-contain">
                 </div>
                 
-                <div class="comic-page aspect-[9/16] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
-                    <img src="comic/1.png" data-text-src="cimoc/1-r.png" alt="Comic Page 1" class="w-full h-full object-cover">
+                <div class="comic-page aspect-[2480/3508] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <img src="comic/1.png" data-text-src="cimoc/1-r.png" alt="Comic Page 1" class="w-full h-full object-contain">
                 </div>
 
-                <div class="comic-page aspect-[9/16] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
-                    <img src="comic/2.png" data-text-src="cimoc/2-r.png" alt="Comic Page 2" class="w-full h-full object-cover">
+                <div class="comic-page aspect-[2480/3508] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <img src="comic/2.png" data-text-src="cimoc/2-r.png" alt="Comic Page 2" class="w-full h-full object-contain">
                 </div>
 
-                <div class="comic-page aspect-[9/16] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
-                    <img src="comic/3.png" data-text-src="cimoc/3-r.png" alt="Comic Page 3" class="w-full h-full object-cover">
+                <div class="comic-page aspect-[2480/3508] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <img src="comic/3.png" data-text-src="cimoc/3-r.png" alt="Comic Page 3" class="w-full h-full object-contain">
                 </div>
 
-                <div class="comic-page aspect-[9/16] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
-                    <img src="comic/4.png" data-text-src="cimoc/4-r.png" alt="Comic Page 4" class="w-full h-full object-cover">
+                <div class="comic-page aspect-[2480/3508] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <img src="comic/4.png" data-text-src="cimoc/4-r.png" alt="Comic Page 4" class="w-full h-full object-contain">
                 </div>
 
                 <div class="comic-page aspect-[1/1] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
-                    <img src="comic/back.png" data-text-src="cimoc/back-r.png" alt="Comic Back Cover" class="w-full h-full object-cover">
+                    <img src="comic/back.png" data-text-src="cimoc/back-r.png" alt="Comic Back Cover" class="w-full h-full object-contain">
                 </div>
                 
             </div>
@@ -678,8 +678,6 @@
             const homePage = document.getElementById('home-page');
             const reflectPage = document.getElementById('reflection-page');
             const nav = document.getElementById('game-nav');
-
-            window.scrollTo(0, 0);
 
             if (route === 'reflection' || route === 'noitcelfer') {
                 homePage.classList.remove('active');
