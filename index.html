@@ -52,7 +52,7 @@
         <!-- Philosophy Section -->
         <section class="py-20 px-4 bg-gradient-to-b from-transparent to-black/80">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="font-marker text-4xl md:text-5xl text-mk-white mb-12 border-b-2 border-mk-red inline-block pb-2">Our Philosophy</h2>
+                <h2 class="font-montserrat font-bold text-4xl md:text-5xl text-mk-white mb-12 border-b-2 border-mk-red inline-block pb-2">Our Philosophy</h2>
                 <div class="grid md:grid-cols-2 gap-12 text-left">
                     <div class="bg-white/5 p-8 rounded-lg border-l-4 border-mk-red hover:bg-white/10 transition-colors">
                         <h3 class="text-2xl font-bold mb-4 text-mk-red font-montserrat">The Meaning of Meikyo</h3>
@@ -82,7 +82,7 @@
                 <!-- Decor -->
                 <div class="absolute top-0 right-0 w-32 h-32 bg-mk-crimson blur-[80px] opacity-20"></div>
                 
-                <h2 class="font-marker text-3xl md:text-4xl text-center mb-10">Connect With Us</h2>
+                <h2 class="font-montserrat font-bold text-3xl md:text-4xl text-center mb-10">Connect With Us</h2>
                 
                 <div class="flex flex-col md:flex-row gap-8 justify-center items-center mb-12">
                     <a href="mailto:info@meikyo.studio" class="flex items-center gap-3 px-6 py-3 bg-white text-black font-bold rounded hover:bg-gray-200 transition-colors">
@@ -119,7 +119,7 @@
         <!-- News Section -->
         <section class="py-20 px-4 bg-white/5">
             <div class="max-w-6xl mx-auto">
-                <h2 class="font-marker text-4xl text-mk-white mb-10 text-center">Latest News</h2>
+                <h2 class="font-montserrat font-bold text-4xl text-mk-white mb-10 text-center">Latest News</h2>
                 <div class="grid md:grid-cols-3 gap-6">
                     <!-- Placeholder Card -->
                     <div class="bg-black/60 border border-white/10 p-6 rounded h-64 flex flex-col justify-center items-center text-center group hover:border-mk-gold transition-colors">
@@ -140,7 +140,7 @@
         <!-- Jobs Section -->
         <section class="py-20 px-4 border-t border-white/5">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="font-marker text-4xl text-mk-white mb-6">Careers</h2>
+                <h2 class="font-montserrat font-bold text-4xl text-mk-white mb-6">Careers</h2>
                 <p class="text-xl text-gray-400 mb-8">Join the ranks. Build the future.</p>
                 <div class="border-2 border-dashed border-gray-600 rounded-xl p-12">
                     <p class="text-lg font-mono text-mk-gold">No open positions currently. Check back soon.</p>
@@ -177,6 +177,17 @@
         <!-- TAB CONTENT: COMIC -->
         <div id="tab-comic" class="tab-content max-w-4xl mx-auto px-4 pb-20 block">
             
+            <!-- Give a disclaimer that first time load has a delay. -->
+            <div class="bg-gradient-to-r from-mk-purple/40 to-mk-crimson/40 p-6 rounded-xl border-2 border-dashed border-mk-gold shadow-lg shadow-mk-purple/30 mb-8 fade-in-on-scroll">
+                <div class="flex items-start gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-mk-gold flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    <div>
+                        <h3 class="font-marker text-lg text-mk-gold mb-2">First Time Load Delay</h3>
+                        <p class="text-gray-300 text-sm">Depending on where you are and the current traffic, there may be a delay before the comic loads on the very first visit.</p>
+                    </div>
+                </div>
+            </div>
+            
             <div class="text-center mb-8 flex items-center justify-center gap-3">
                 <span class="font-montserrat text-lg text-mk-gold">Press</span>
                 <!-- R Key Icon -->
@@ -189,23 +200,23 @@
             <!-- Comic Pages Container (Scroll View) -->
             <div class="bg-black/40 p-4 md:p-8 rounded-xl border border-white/10 shadow-2xl">
                 <!-- Cover, Pages 1-4, and Back -->
-                <div class="comic-page aspect-[3/4] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                <div class="comic-page aspect-[9/16] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
                     <img src="comic/cover.png" data-text-src="cimoc/cover-r.png" alt="Comic Cover" class="w-full h-full object-cover">
                 </div>
                 
-                <div class="comic-page aspect-[3/4] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                <div class="comic-page aspect-[9/16] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
                     <img src="comic/1.png" data-text-src="cimoc/1-r.png" alt="Comic Page 1" class="w-full h-full object-cover">
                 </div>
 
-                <div class="comic-page aspect-[3/4] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                <div class="comic-page aspect-[9/16] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
                     <img src="comic/2.png" data-text-src="cimoc/2-r.png" alt="Comic Page 2" class="w-full h-full object-cover">
                 </div>
 
-                <div class="comic-page aspect-[3/4] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                <div class="comic-page aspect-[9/16] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
                     <img src="comic/3.png" data-text-src="cimoc/3-r.png" alt="Comic Page 3" class="w-full h-full object-cover">
                 </div>
 
-                <div class="comic-page aspect-[3/4] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                <div class="comic-page aspect-[9/16] bg-gray-900 flex items-center justify-center relative overflow-hidden group">
                     <img src="comic/4.png" data-text-src="cimoc/4-r.png" alt="Comic Page 4" class="w-full h-full object-cover">
                 </div>
 
@@ -219,14 +230,25 @@
         <!-- TAB CONTENT: CHARACTERS -->
         <div id="tab-characters" class="tab-content max-w-5xl mx-auto px-4 pb-20 hidden">
 
+            <!-- Give a disclaimer that this is not the final look. -->
+            <div class="bg-gradient-to-r from-mk-purple/40 to-mk-crimson/40 p-6 rounded-xl border-2 border-dashed border-mk-gold shadow-lg shadow-mk-purple/30 mb-8 fade-in-on-scroll">
+                <div class="flex items-start gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-mk-gold flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    <div>
+                        <h3 class="font-marker text-lg text-mk-gold mb-2">Teaser Notice</h3>
+                        <p class="text-gray-300 text-sm">The teasers herein are just to give you an idea; the final look and feel may be significantly different.</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Character 1: PYRO -->
             <div class="character-card mb-20 fade-in-on-scroll">
                 <h3 class="font-marker text-4xl text-mk-pyro mb-2">PYRO</h3>
                 <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-pyro pl-4">
-                    Harnessing the raw power of the sun. High offensive capabilities with radiant burns that reduce enemy healing over time.
+                    Hottest morphs, depending on who you ask. They gain heat with elemental power, increasing their attack speed.
                 </p>
                 <div class="relative w-full aspect-video max-h-[60vh] mx-auto rounded-lg overflow-hidden border border-yellow-900 shadow-[0_0_20px_rgba(255,164,0,0.3)]">
-                    
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/FxmkWbmoiMk?si=QnBwWk54Xbr5Wb6W&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-pyro to-transparent mt-12 opacity-50"></div>
             </div>
@@ -235,10 +257,10 @@
             <div class="character-card mb-20 fade-in-on-scroll">
                 <h3 class="font-marker text-4xl text-mk-hydro mb-2">HYDRO</h3>
                 <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-hydro pl-4">
-                    Master of flowing waters and freezing ice. Defensive support with the ability to create barriers and control the battlefield's moisture.
+                    Coolest morphs in the game, literally. They gain life with elemental power, increasing their health regeneration.
                 </p>
                 <div class="relative w-full aspect-video max-h-[60vh] mx-auto rounded-lg overflow-hidden border border-blue-900 shadow-[0_0_20px_rgba(0,168,255,0.3)]">
-                    
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/ord4-yKCKrU?si=kuZduH3Amc-zwhLf&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-hydro to-transparent mt-12 opacity-50"></div>
             </div>
@@ -247,46 +269,50 @@
             <div class="character-card mb-20 fade-in-on-scroll">
                 <h3 class="font-marker text-4xl text-mk-electro mb-2">ELECTRO</h3>
                 <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-electro pl-4">
-                    Wielder of lightning and electrical surges. Fast-moving striker with chain reactions that spread damage across multiple enemies.
+                    Most energetic morphs in the game. They surge with elemental power, increasing their energy regeneration.
                 </p>
-                <div class="relative w-full aspect-video max-h-[60vh] mx-auto rounded-lg overflow-hidden border border-yellow-400 shadow-[0_0_20px_rgba(255,255,0,0.3)]">
-                    
+                <div class="relative w-full aspect-[16/9] flex items-center justify-center relative overflow-hidden rounded-lg border border-yellow-400 shadow-[0_0_20px_rgba(255,255,0,0.3)]">
+                    <img src="electro.png" alt="ELECTRO Characters" class="w-full h-full object-cover">
                 </div>
                 <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-electro to-transparent mt-12 opacity-50"></div>
             </div>
 
-            <!-- Character 4: GEO -->
-            <div class="character-card mb-20 fade-in-on-scroll">
-                <h3 class="font-marker text-4xl text-mk-geo mb-2">GEO</h3>
-                <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-geo pl-4">
-                    Command of earth and stone. Tanky defender with the ability to create protective structures and control terrain.
-                </p>
-                <div class="relative w-full aspect-video max-h-[60vh] mx-auto rounded-lg overflow-hidden border border-green-900 shadow-[0_0_20px_rgba(0,204,102,0.3)]">
-                    
-                </div>
-                <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-geo to-transparent mt-12 opacity-50"></div>
-            </div>
-
-            <!-- Character 5: ANEMO -->
+            <!-- Character 4: ANEMO -->
             <div class="character-card mb-20 fade-in-on-scroll">
                 <h3 class="font-marker text-4xl text-mk-anemo mb-2">ANEMO</h3>
                 <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-anemo pl-4">
-                    Harnesser of the wind and air currents. Agile scout with mobility and crowd control through windblasts and cyclones.
+                    Most mobile morphs in the game. They gust with elemental power, increasing their movement speed.
                 </p>
-                <div class="relative w-full aspect-video max-h-[60vh] mx-auto rounded-lg overflow-hidden border border-cyan-900 shadow-[0_0_20px_rgba(0,212,212,0.3)]">
-                    
+                <div class="relative w-full aspect-[16/9] flex items-center justify-center relative overflow-hidden rounded-lg border border-cyan-900 shadow-[0_0_20px_rgba(0,212,212,0.3)]">
+                    <img src="anemo.png" alt="ELECTRO Characters" class="w-full h-full object-cover">
                 </div>
                 <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-anemo to-transparent mt-12 opacity-50"></div>
+            </div>
+            
+            <!-- Character 5: GEO -->
+            <div class="character-card mb-20 fade-in-on-scroll">
+                <h3 class="font-marker text-4xl text-mk-geo mb-2">GEO</h3>
+                <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-geo pl-4">
+                    Rock solid morphs. They solidify with elemental power, increasing their energy regeneration.
+                </p>
+                <div class="relative w-full aspect-video bg-black rounded-lg border border-mk-geo overflow-hidden shadow-[0_0_20px_rgba(180,130,70,0.3)]">
+                    <div class="w-full h-full flex items-center justify-center">
+                        <p class="text-gray-500 text-lg font-montserrat tracking-wide">Check back soon for GEO reveal...</p>
+                    </div>
+                </div>
+                <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-geo to-transparent mt-12 opacity-50"></div>
             </div>
 
             <!-- Character 6 -->
             <div class="character-card mb-20 fade-in-on-scroll">
                 <h3 class="font-marker text-4xl text-mk-purple mb-2">VOID</h3>
                 <p class="text-gray-300 mb-6 font-montserrat max-w-2xl border-l-2 border-mk-purple pl-4">
-                    A master of the dark arts, utilizing shadows to reposition and strike from the unseen. The Void Walker reflects damage back to the source using the cosmos.
+                    The element with all elements. The element without any element.
                 </p>
                 <div class="relative w-full aspect-video bg-black rounded-lg border border-purple-900 overflow-hidden shadow-[0_0_20px_rgba(107,33,168,0.3)]">
-                    
+                    <div class="w-full h-full flex items-center justify-center">
+                        <p class="text-gray-500 text-lg font-montserrat tracking-wide">Check back soon for VOID reveal...</p>
+                    </div>
                 </div>
                 <div class="w-full h-px bg-gradient-to-r from-transparent via-mk-purple to-transparent mt-12 opacity-50"></div>
             </div>
@@ -315,7 +341,7 @@
                 <br>
                 <p class="text-gray-400 text-sm mb-4">Note: This UI is meant to be a 1280x720p window outside the full-screen game for selection only.</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/QHwN4lQTpl0?si=x6Yci0peS5rfdPwv&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/QHwN4lQTpl0?si=x6Yci0peS5rfdPwv&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -325,7 +351,7 @@
                 <h3 class="font-marker text-2xl text-white mb-2">Creating Your Hero: Choosing an Ultimate</h3>
                 <p class="text-gray-400 text-sm mb-4">Unlike morphs, abilities do not have classes, but like morphs, they are made of elements as well. A hero can only have one ultimate ability. The player that decides the morph also selects the ultimate, and once chosen, that ultimate cannot be selected by any other player. Ultimates level up slower than basic abilities and typically have a higher cooldown. Properly landing or missing an ultimate can make or break a win.</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/StrMfmTxOLw?si=JOKgtwDrxbSjSrxh&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/StrMfmTxOLw?si=JOKgtwDrxbSjSrxh&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             
@@ -335,7 +361,7 @@
                 <h3 class="font-marker text-2xl text-white mb-2">Creating Your Hero: Choosing Abilities</h3>
                 <p class="text-gray-400 text-sm mb-4">The Reflection (opponent) of the player who chose the Morph and Ultimate decides the three basic abilities the hero will possess, thus forging the hero into existence. Basic abilities, like Ultimates and Morphs, are element-based. Like with Ultimates, once a basic ability is chosen, it cannot be chosen by others. Because both sides play with the same abilities (a symmetrical draft), drafting is based on playstyle rather than win rate (the current meta).</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/n3YtEDqP1Os?si=eMTUjCZFmz4hTvvH&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/n3YtEDqP1Os?si=eMTUjCZFmz4hTvvH&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             
@@ -345,7 +371,7 @@
                 <h3 class="font-marker text-2xl text-white mb-2">Creating Your Hero: Complete Electro Flow</h3>
                 <p class="text-gray-400 text-sm mb-4">For Morphs other than Void, only abilities of their element and of Void are available. See the full flow for Electro below.</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/MgEvCm8IJk8?si=O-emTxXVIjTMbdyn&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/MgEvCm8IJk8?si=O-emTxXVIjTMbdyn&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             
@@ -425,7 +451,7 @@
                     <p class="text-gray-400 text-sm mb-4">* More technically, the matrix exhibits additive symmetry around the principal diagonal with a center value of 1.</p>
                 </div>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/TnUrTPTp3kY?si=jIXXaCu5LaCzH9TZ&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/TnUrTPTp3kY?si=jIXXaCu5LaCzH9TZ&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             
@@ -435,21 +461,21 @@
                 <h3 class="font-marker text-2xl text-white mb-2">Parrying to Block Damage</h3>
                 <p class="text-gray-400 text-sm mb-4">One of the best feelings in games like Sekiro is perfectly timing a parry to block what could otherwise be fatal damage. Reflection aims to provide that satisfactory feeling. The capacity to block damage can be increased with items and abilities.</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/WXWo4CpZ5MM?si=scTZ2y46tFMCplgp&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/WXWo4CpZ5MM?si=scTZ2y46tFMCplgp&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
             <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
 
             <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
-                <h3 class="font-marker text-2xl text-white mb-2">Jumping to Evade Spells and Attackers</h3>
-                <p class="text-gray-400 text-sm mb-4">You can jump to evade some ground based spells. Doing a double-jump off of an attacker stuns them, providing you with an opportunity to evade them.</p>
+                <h3 class="font-marker text-2xl text-white mb-2">Jumping to Evade Abilities and Attackers</h3>
+                <p class="text-gray-400 text-sm mb-4">You can jump to evade some ground based abilities. Doing a double-jump off of an attacker stuns them, providing you with an opportunity to evade them.</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/Jpg5NRgaolY?si=e-zvnLEvoY9a42YQ&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <br>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/2WuGi8pXzTY?si=DaUADfTtL-UeSaIT&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/2WuGi8pXzTY?si=DaUADfTtL-UeSaIT&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -459,7 +485,7 @@
                 <h3 class="font-marker text-2xl text-white mb-2">Critting Without RNG</h3>
                 <p class="text-gray-400 text-sm mb-4">Since our philosophy is to not let the roll of a die decide a win, we must provide other means for effects like critical strikes. One way is through Abilities or Gems that temporarily allow crits upon meeting set criteria.</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/LWtaKLnP5yU?si=ObSJqhB8mB31LXyz&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/LWtaKLnP5yU?si=ObSJqhB8mB31LXyz&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -469,17 +495,17 @@
                 <h3 class="font-marker text-2xl text-white mb-2">Doing a Fatality</h3>
                 <p class="text-gray-400 text-sm mb-4">Critical strikes turn into Fatality when the opponent is under a threshold health percentage.</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/-iUYHbN1acQ?si=alszfH2XN_Jjc2g7&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
             <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50 my-4"></div>
 
             <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-mk-crimson transition-colors fade-in-on-scroll">
-                <h3 class="font-marker text-2xl text-white mb-2">Leveling Up and Unlocking Gems</h3>
+                <h3 class="font-marker text-2xl text-white mb-2">Levelling Up and Unlocking Gems</h3>
                 <p class="text-gray-400 text-sm mb-4">The fifth level of a basic ability, the fourth of an ultimate, and the fifteenth hero level unlock choosing a Gem for the basic ability, the ultimate, and the Morph respectively. Ability Gems passively enhance abilities and Morph Gems provide passive effects based on the Ability and Morph respectively. Your leveling choices and the Gems you select will ultimately decide whether you best your Reflection. <b>This is the point where the reflection breaks, so to speak.</b></p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/1oHeCOQVYRI?si=pvRT3aEtLtkxZmV6&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -497,7 +523,7 @@
                 <h3 class="font-marker text-2xl text-white mb-2">Crafting Items: Passive Items</h3>
                 <p class="text-gray-400 text-sm mb-4">Passive Items belong to one of 13 Paths. Forging two or more items from the same Path unlocks powerful Path Benefits, the strength of which depends on the Path Level achieved. This ensures that crafting remains a creative, strategic process, not just a mere act of bundling items. Passive Items that only modify attributes and do not restrict further forging range from Basic to Exotic, with higher tiers costing more.</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/ROCpbj0KsrU?si=3iDbdki3ysTISXMQ&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -507,7 +533,7 @@
                 <h3 class="font-marker text-2xl text-white mb-2">Crafting Items: Epic Items</h3>
                 <p class="text-gray-400 text-sm mb-4">Epic Items are special items that cannot be purchased; they can only be forged. Epic Items cost no RPs. Once an Epic Item is incorporated, the forged item itself becomes Epic and cannot be used for any further forging. This limitation means players must strategically choose their Epic Items. These items often provide a unique, powerful effect instead of a simple attribute modification.</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/Sb4lUO6uCNc?si=t0RwzNuijEHANktu&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -517,7 +543,7 @@
                 <h3 class="font-marker text-2xl text-white mb-2">Crafting Items: Catalysts</h3>
                 <p class="text-gray-400 text-sm mb-4">Catalysts are active items, so named because they catalyze reactions through special effects triggered by the player. They cannot be forged with Passive Items but can be upgraded. Unlike Epic Items, Catalysts and their upgrades cost RPs. This creates a critical choice: at various points in the game, players must decide between spending RPs to buy or upgrade a Catalyst (which provides no passive attribute benefit) or using those resources to progress toward forging a game-changing Epic Item. This constant resource tension significantly adds depth to the game.</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/VAD5NMnE5fY?si=1VmZMluvkk7YF4ca&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/VAD5NMnE5fY?si=1VmZMluvkk7YF4ca&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -527,7 +553,7 @@
                 <h3 class="font-marker text-2xl text-white mb-2">Highlighting the Common Aspects</h3>
                 <p class="text-gray-400 text-sm mb-4">Other aspects of Reflection are common with popular MOBAs, in how RP (Reward Points, akin to gold) and XP are earned, the risk-reward principle, monsters, jungle, lanes, towers, and the ultimate goal of defending your base while destroying your enemy's.</p>
                 <div class="aspect-video bg-black rounded overflow-hidden relative">
-                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/KhSEWVPmDto?si=GfCp3_C32teriEfY&amp;controls=1&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-full object-cover lazy-video" src="https://www.youtube.com/embed/KhSEWVPmDto?si=GfCp3_C32teriEfY&amp;controls=1&amp;rel=0&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
